@@ -1,0 +1,235 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --background: 40 20% 98%;
+    --foreground: 222.2 84% 4.9%;
+
+    --card: 0 0% 100%;
+    --card-foreground: 222.2 84% 4.9%;
+
+    --popover: 0 0% 100%;
+    --popover-foreground: 222.2 84% 4.9%;
+
+    --primary: 262 83% 58%;
+    --primary-foreground: 0 0% 100%;
+    --primary-gradient: linear-gradient(135deg, hsl(262, 83%, 58%), hsl(217, 91%, 60%));
+    
+    --secondary: 172 66% 50%;
+    --secondary-foreground: 0 0% 100%;
+    --secondary-gradient: linear-gradient(135deg, hsl(172, 66%, 50%), hsl(320, 65%, 52%));
+
+    --reading-light: 40 56% 97%;
+    --reading-dark: 222 47% 11%;
+    
+    --accent: 320 65% 52%;
+    --accent-foreground: 0 0% 100%;
+    
+    --muted: 210 40% 96.1%;
+    --muted-foreground: 215.4 16.3% 46.9%;
+
+    --destructive: 0 84.2% 60.2%;
+    --destructive-foreground: 210 40% 98%;
+
+    --success: 142 76% 36%;
+    --success-foreground: 0 0% 100%;
+
+    --warning: 38 92% 50%;
+    --warning-foreground: 0 0% 100%;
+
+    --border: 214.3 31.8% 91.4%;
+    --input: 214.3 31.8% 91.4%;
+    --ring: 262 83% 58%;
+
+    --radius: 1rem;
+
+    /* Beautiful Gradients */
+    --gradient-hero: linear-gradient(135deg, hsl(262, 83%, 58%) 0%, hsl(217, 91%, 60%) 100%);
+    --gradient-card: linear-gradient(145deg, hsl(0, 0%, 100%) 0%, hsl(40, 20%, 96%) 100%);
+    --gradient-accent: linear-gradient(135deg, hsl(172, 66%, 50%) 0%, hsl(320, 65%, 52%) 100%);
+    --gradient-reading: linear-gradient(180deg, hsl(40, 56%, 97%) 0%, hsl(40, 30%, 94%) 100%);
+    
+    /* Beautiful Shadows */
+    --shadow-card: 0 10px 30px -5px hsl(262 83% 58% / 0.1);
+    --shadow-card-hover: 0 20px 40px -10px hsl(262 83% 58% / 0.15);
+    --shadow-reader: 0 25px 50px -15px hsl(222 47% 11% / 0.25);
+    
+    /* Animations & Transitions */
+    --transition-smooth: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    --transition-bouncy: all 0.4s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+    
+    /* Sidebar */
+    --sidebar-background: 0 0% 98%;
+    --sidebar-foreground: 240 5.3% 26.1%;
+    --sidebar-primary: 262 83% 58%;
+    --sidebar-primary-foreground: 0 0% 98%;
+    --sidebar-accent: 240 4.8% 95.9%;
+    --sidebar-accent-foreground: 240 5.9% 10%;
+    --sidebar-border: 220 13% 91%;
+    --sidebar-ring: 262 83% 58%;
+  }
+
+  .dark {
+    --background: 222 47% 11%;
+    --foreground: 210 40% 98%;
+
+    --card: 222 47% 13%;
+    --card-foreground: 210 40% 98%;
+
+    --popover: 222 47% 13%;
+    --popover-foreground: 210 40% 98%;
+
+    --primary: 262 83% 58%;
+    --primary-foreground: 0 0% 100%;
+    --primary-gradient: linear-gradient(135deg, hsl(262, 83%, 58%), hsl(217, 91%, 60%));
+    
+    --secondary: 172 66% 50%;
+    --secondary-foreground: 0 0% 100%;
+    --secondary-gradient: linear-gradient(135deg, hsl(172, 66%, 50%), hsl(320, 65%, 52%));
+
+    --reading-light: 222 47% 15%;
+    --reading-dark: 222 47% 8%;
+    
+    --accent: 320 65% 52%;
+    --accent-foreground: 0 0% 100%;
+    
+    --muted: 217.2 32.6% 17.5%;
+    --muted-foreground: 215 20.2% 65.1%;
+
+    --destructive: 0 62.8% 50%;
+    --destructive-foreground: 210 40% 98%;
+    
+    --success: 142 76% 45%;
+    --success-foreground: 0 0% 100%;
+
+    --warning: 38 92% 60%;
+    --warning-foreground: 0 0% 100%;
+
+    --border: 217.2 32.6% 17.5%;
+    --input: 217.2 32.6% 17.5%;
+    --ring: 262 83% 58%;
+
+    /* Dark Mode Gradients */
+    --gradient-hero: linear-gradient(135deg, hsl(262, 83%, 58%) 0%, hsl(217, 91%, 60%) 100%);
+    --gradient-card: linear-gradient(145deg, hsl(222, 47%, 13%) 0%, hsl(222, 47%, 15%) 100%);
+    --gradient-accent: linear-gradient(135deg, hsl(172, 66%, 50%) 0%, hsl(320, 65%, 52%) 100%);
+    --gradient-reading: linear-gradient(180deg, hsl(222, 47%, 15%) 0%, hsl(222, 47%, 11%) 100%);
+    
+    /* Dark Mode Shadows */
+    --shadow-card: 0 10px 30px -5px hsl(0 0% 0% / 0.3);
+    --shadow-card-hover: 0 20px 40px -10px hsl(0 0% 0% / 0.4);
+    --shadow-reader: 0 25px 50px -15px hsl(0 0% 0% / 0.5);
+    
+    --sidebar-background: 240 5.9% 10%;
+    --sidebar-foreground: 240 4.8% 95.9%;
+    --sidebar-primary: 262 83% 58%;
+    --sidebar-primary-foreground: 0 0% 100%;
+    --sidebar-accent: 240 3.7% 15.9%;
+    --sidebar-accent-foreground: 240 4.8% 95.9%;
+    --sidebar-border: 240 3.7% 15.9%;
+    --sidebar-ring: 262 83% 58%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply bg-background text-foreground font-sans antialiased;
+    transition: var(--transition-smooth);
+  }
+  
+  /* Smooth scrolling for the entire page */
+  html {
+    scroll-behavior: smooth;
+  }
+}
+
+@layer components {
+  /* Beautiful gradient backgrounds */
+  .gradient-hero {
+    background: var(--gradient-hero);
+  }
+  
+  .gradient-card {
+    background: var(--gradient-card);
+  }
+  
+  .gradient-accent {
+    background: var(--gradient-accent);
+  }
+  
+  .gradient-reading {
+    background: var(--gradient-reading);
+  }
+
+  /* Beautiful card shadows */
+  .shadow-card {
+    box-shadow: var(--shadow-card);
+  }
+  
+  .shadow-card-hover {
+    box-shadow: var(--shadow-card-hover);
+  }
+  
+  .shadow-reader {
+    box-shadow: var(--shadow-reader);
+  }
+
+  /* Smooth transitions */
+  .transition-smooth {
+    transition: var(--transition-smooth);
+  }
+  
+  .transition-bouncy {
+    transition: var(--transition-bouncy);
+  }
+
+  /* Reading mode styles */
+  .reading-light {
+    background-color: hsl(var(--reading-light));
+    color: hsl(var(--reading-dark));
+  }
+  
+  .reading-dark {
+    background-color: hsl(var(--reading-dark));
+    color: hsl(var(--reading-light));
+  }
+
+  /* Interactive hover effects */
+  .hover-lift {
+    @apply transition-smooth;
+    &:hover {
+      transform: translateY(-2px);
+      box-shadow: var(--shadow-card-hover);
+    }
+  }
+  
+  .hover-scale {
+    @apply transition-smooth;
+    &:hover {
+      transform: scale(1.02);
+    }
+  }
+
+  /* Beautiful book card styles */
+  .book-card {
+    @apply bg-card rounded-2xl shadow-card hover-lift transition-smooth;
+  }
+  
+  .book-card:hover {
+    @apply shadow-card-hover;
+  }
+
+  /* Gradient text effect */
+  .text-gradient {
+    background: var(--gradient-hero);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+  }
+}
