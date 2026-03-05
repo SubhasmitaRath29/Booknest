@@ -3,17 +3,16 @@
 ## Live Demo
 Coming soon
 
-
 ## 📸 Screenshots
 
 ### Home Page
-![Home Page](assets/screenshots/home.png)
+![Home](frontend/src/assets/screenshots/home.png)
 
 ### Book Reader
-![mycart](assets/screenshots/mycart.png)
+![Reader](frontend/src/assets/screenshots/reader.png)
 
 ### Search Page
-![community community ](assets/screenshots/community.png)
+![Search](frontend/src/assets/screenshots/search.png)
 
 ### Admin Dashboard
-![Admin](assets/screenshots/admin.png)
+![Admin](frontend/src/assets/screenshots/admin.png)
